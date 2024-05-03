@@ -149,7 +149,10 @@ foreach($result2 as $row)
 
 
 
-            <div class="form-group row">
+								<?php
+    if(false){
+?>
+<div class="form-group row">
                                     <label class="col-form-label col-md-4">State</label>
                                     <div class="col-md-10">
                                        <select type="text" class="form-control" onChange="getcities(this.value);"  name="state" id="state" required="true" >
@@ -181,7 +184,9 @@ foreach($result3 as $row1)
 
 
 
-
+								<?php
+    }
+?>
 
 
 

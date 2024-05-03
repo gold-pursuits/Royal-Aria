@@ -2,14 +2,11 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Royal Aria Conference Center
-</title>
+<title>Royal Aria Conference Center</title>
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
@@ -44,41 +41,22 @@ include('includes/dbconnection.php');
 	<div class="banner jarallax">
 		<div class="agileinfo-dot">
 			<?php include_once('includes/header.php');?>
+	
 			<div class="w3layouts-banner">
 				<div class="container">
 					<div class="w3-banner-info">
 						<div class="w3l-banner-text">
-						  <h2>BOOK A VENUE</h2>
-<p>One Venue. Limitless Possibilities</p>
+							<h2>BOOK A VENUE</h2>
+							<p>One Venue. Limitless Possibilities</p>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<div class="w3ls-banner-info-bottom">
 				<div class="container">
 					<div class="banner-address">
-						<?php
-$sql="SELECT * from tblpage where PageType='contactus'";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $row)
-{               ?>
-						<div class="col-md-4 banner-address-left">
-							<p><i class="fa fa-map-marker" aria-hidden="true"></i> <?php  echo htmlentities($row->PageDescription);?>.</p>
-						</div>
-						<div class="col-md-4 banner-address-left">
-							<p><i class="fa fa-envelope" aria-hidden="true"></i> <?php  echo htmlentities($row->Email);?></p>
-						</div>
-						<div class="col-md-4 banner-address-left">
-							<p><i class="fa fa-phone" aria-hidden="true"></i> +<?php  echo htmlentities($row->MobileNumber);?></p>
-						</div>
-						<div class="clearfix"> </div>
-					<?php $cnt=$cnt+1;}} ?></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -87,31 +65,19 @@ foreach($results as $row)
 	<!-- banner-bottom -->
 	<div class="banner-bottom">
 		<div class="container">
-			<div class="wthree-bottom-grids">
-				<div class="col-md-6 wthree-bottom-grid">
-					<div class="w3-agileits-bottom-left">
-						<div class="w3-agileits-bottom-left-text">
-							<h3>Planning from start to finish</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lacus vel purus sagittis convallis ut ac risus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 wthree-bottom-grid">
-					<div class="w3-agileits-bottom-left w3-agileits-bottom-right">
-						<div class="w3-agileits-bottom-left-text">
-							<h3>LET THE EXPERTS RUN YOUR WEDDING</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lacus vel purus sagittis convallis ut ac risus.</p>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
+			<div class="agileits-heading">
+				<h3>Welcome to Royal Aria Conference Center</h3>
 			</div>
+			<div class="w3-agileits-blog-grid">
+				<p>This is where you can describe more about the conference center, its facilities, location, and any other relevant information.</p>
+			</div>
+			<div class="clearfix"> </div>
 		</div>
 	</div>
 	<!-- //banner-bottom -->
 
 	
-<?php include_once('includes/footer.php');?>
+	<?php include_once('includes/footer.php');?>
 	<!-- jarallax -->
 	<script src="js/jarallax.js"></script>
 	<script src="js/SmoothScroll.min.js"></script>
@@ -141,10 +107,10 @@ foreach($results as $row)
 								
 			$().UItoTop({ easingType: 'easeOutQuart' });
 								
-			});
+		});
 	</script>
-<!-- //here ends scrolling icon -->
-<script src="js/modernizr.custom.js"></script>
+	<!-- //here ends scrolling icon -->
+	<script src="js/modernizr.custom.js"></script>
 
 </body>	
 </html>

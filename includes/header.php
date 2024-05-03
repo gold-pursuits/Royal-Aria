@@ -45,16 +45,16 @@
                     <!-- /.navbar-collapse -->
                 </nav>
             </div>
-            <?php if (strlen($_SESSION['obbsuid']) == 0) {?>
-                <!-- Show login and register links -->
-                <div class="agileitits-logo pull-left">
-                    <ul style="color: white;">
-                        <li style="color: white;"><a href="login.php">Login</a></li>
-                        <li style="color: white;"> <a href="signup.php">Register</a></li>
-                        <li><a href="admin/login.php">Admin</a></li>
-                    </ul>
-                </div>
-            <?php } ?>
+            <?php if (strlen($_SESSION['obbsuid']) == 0):?>
+    <!-- Show login and register links -->
+    <div class="agileitits-logo">
+        <ul>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="signup.php">Register</a></li>
+            <li><a href="admin/login.php">Admin</a></li>
+        </ul>
+    </div>
+<?php endif;?>
         </div>
         <div class="clearfix"> </div>
     </div>

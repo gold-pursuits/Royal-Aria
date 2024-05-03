@@ -457,8 +457,8 @@ i.fa.fa-anchor, i.fa.fa-comment, i.fa.fa-heartbeat,i.fa.fa-magnet {
 }
 /*-- //services --*/
 /*-- services-bottom --*/
-.wthree-services-left img{
-	width:100%;
+.wthree-services-left img {
+    /* Remove width: 100%; */
 }
 .wthree-services-right-top h4{
 	color: #212121;
@@ -2098,5 +2098,36 @@ button.btn1:hover{
 	.w3layouts-contact-form-top p {
 		margin: 1em 0;
 	}
+
+    .agileitits-logo {
+        float: right;
+        margin-right: 20px;
+      }
+      
+      .agileitits-logo ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .agileitits-logo li {
+        display: inline;
+        margin-right: 10px;
+      }
+      
+      .agileitits-logo a {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .agileitits-logo a:hover {
+        background-color: #555;
+      }
+      
 }
 /*-- //responsive --*/

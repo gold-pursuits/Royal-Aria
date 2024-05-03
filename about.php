@@ -53,14 +53,11 @@ include('includes/dbconnection.php');
 	<div class="about-top">
 		<div class="container">
 			<div class="wthree-services-bottom-grids">
-				<div class="col-md-6 wthree-services-left">
-					<img src="images/5.jpg" alt="">
-				</div>
 				<div class="col-md-6 wthree-services-right">
 					<div class="wthree-services-right-top">
 						 <?php
 $sql="SELECT * from tblpage where PageType='aboutus'";
-$query = $dbh -> prepare($sql);
+$query = $dbh->prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 
@@ -69,8 +66,8 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-						<h4><?php  echo htmlentities($row->PageTitle);?></h4>
-						<p><?php  echo $row->PageDescription;?></p><?php $cnt=$cnt+1;}} ?>
+						<h4><?php echo htmlentities($row->PageTitle);?></h4>
+						<p><?php echo $row->PageDescription;?></p><?php $cnt=$cnt+1;}} ?>
 					</div>
 					
 					<div class="clearfix"> </div>
